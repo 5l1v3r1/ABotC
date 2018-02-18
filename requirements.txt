@@ -1,0 +1,8 @@
+tqdm
+pycurl
+requests
+bs4
+PyPDF2
+
+datetime
+argparse

@@ -7,22 +7,17 @@ Descargar los ejemplares correspondientes al período de tiempo especificado:
 ```
 abc2.py -s yyyy-mm-dd -e yyyy-mm-dd
 ```
+Si solo se desea obtener un día en concreto:
+```
+abc2.py -s yyyy-mm-dd
+```
+
 Argumentos:
 
     -s: fecha inicial
     -e: fecha final
 
 ## Requisitos
-Para poder ejecutar correctamente el script los siguientes módulos son necesarios:
-### Networking
-* [PyCurl](http://pycurl.io/)
-* [Requests](http://docs.python-requests.org/en/master/)
-### Manejo de pdf
-* [PyPDF2](https://github.com/mstamy2/PyPDF2)
-### WebScrapping
-* [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-### Otros
-* [io](https://docs.python.org/2/library/io.html)
-* [Subprocess](https://docs.python.org/2/library/subprocess.html)
+Para poder ejecutar correctamente el script los módulos especificados en requirements.txt son necesarios.
 
 ## Úsese con responsabilidad. El autor no se responsabiliza del uso indebido que los usuarios finales hagan de esta herramienta

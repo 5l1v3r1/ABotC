@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 from PyPDF2 import PdfFileMerger, utils
 from subprocess import Popen
 
@@ -19,7 +22,7 @@ class writer():
             self.merger.append(f)
 
     def write(self, date):
-        self.merger.write(str(date).split(' ')[0]+'.pdf')
+        self.merger.write(str(date)+'.pdf')
 
     def remove_local(self):
         [Popen(['rm', file]) for file in self.local_files]
