@@ -17,7 +17,10 @@ Argumentos:
     -s: fecha inicial
     -e: fecha final
 
-## Requisitos
-Para poder ejecutar correctamente el script los módulos especificados en requirements.txt son necesarios.
+## Instalación
+```
+pip install -r requirements.txt
+```
 
-## Úsese con responsabilidad. El autor no se responsabiliza del uso indebido que los usuarios finales hagan de esta herramienta
+
+>## Úsese con responsabilidad. El autor no se responsabiliza del uso indebido que los usuarios finales hagan de esta herramienta
