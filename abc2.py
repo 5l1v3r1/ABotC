@@ -5,8 +5,18 @@ from subprocess import Popen
 from io import BytesIO
 from tqdm import tqdm
 import requests
+import argparse
 import pycurl
 
+def args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        '-s', dest='start', action='store', required=True, type=str
+    )
+    parser.add_argument(
+        '-e', dest='end', action='store', required=True, type=str
+    )
+    return parser.parse_args()
 
 class writer():
     def __init__(self):
@@ -83,12 +93,13 @@ class newspaper():
         s = BeautifulSoup(r.text, 'html.parser')
 
         self.url = 'http://hemeroteca.abc.es'+(s.find('li', class_='download').a['href'])
-        print self.url
 
-for date in date_range('13-08-1935', '14-08-1935'):
+args = args()
+for date in date_range(args.start, args.end):
     wr = writer()
     np = newspaper(date)
 
+    print 'Downloading '+str(np.pages)+' pages of the '+str(date).split(' ')[0]
     for page in tqdm(range(1, np.pages+1)):
         doc = np.buff_pdf(page)
        
@@ -100,3 +111,4 @@ for date in date_range('13-08-1935', '14-08-1935'):
         
     wr.write(date)
     wr.remove_local()
+    print str(date).split(' ')[0] + ' done!\n'
