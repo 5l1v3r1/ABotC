@@ -1,3 +1,6 @@
+#Old and first version of the bot
+#Use instead abc2.py 
+
 from PyPDF2 import PdfFileReader, PdfFileWriter, utils
 from pandas import date_range
 from bs4 import BeautifulSoup
