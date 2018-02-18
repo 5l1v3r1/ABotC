@@ -1,14 +1,16 @@
 # ABotC
 
-Herramienta para descargar, en formato PDF, los ejemplares del archivo histórico del diario ABC correspondientes al período especificado.
+Herramienta para descargar, en formato PDF, los ejemplares del archivo histórico del diario ABC.
 
 ## Instrucciones de uso: 
+Descargar los ejemplares correspondientes al período de tiempo especificado:
 ```
 abc2.py -s yyyy-mm-dd -e yyyy-mm-dd
 ```
 Argumentos:
-    -s: fecha de inicial
-    -e: fecha de final
+
+    -s: fecha inicial
+    -e: fecha final
 
 ## Requisitos
 Para poder ejecutar correctamente el script los siguientes módulos son necesarios:

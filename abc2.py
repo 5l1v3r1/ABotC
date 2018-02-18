@@ -1,8 +1,7 @@
+from modules import newspaper, writer
 from pandas import date_range
 from tqdm import tqdm
-import newspaper
 import argparse
-import writer
 
 def args():
     parser = argparse.ArgumentParser()
