@@ -26,7 +26,6 @@ class writer():
             self.merger.append(f)
 
     def write(self, date):
-        print 'Saving...'
         self.merger.write(str(date).split(' ')[0]+'.pdf')
 
     def remove_local(self):
@@ -101,5 +100,3 @@ for date in date_range('13-08-1935', '14-08-1935'):
         
     wr.write(date)
     wr.remove_local()
-    print 'Done!'
-    exit()
